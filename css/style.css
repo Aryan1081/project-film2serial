@@ -1,0 +1,534 @@
+/* تغییر رنگ پس‌زمینه اسکرول */
+::-webkit-scrollbar-track {
+    background-color: #8860C2; /* رنگ دلخواه */
+}
+
+/* تغییر رنگ نوار اسکرول */
+::-webkit-scrollbar-thumb {
+    background-color: #FFC107; /* رنگ دلخواه */
+    border-radius: 5px;
+}
+
+/* تغییر اندازه نوار اسکرول */
+::-webkit-scrollbar {
+    width: 10px; /* عرض اسکرول */
+}
+
+
+:root{
+    --text-xs:0.75rem;
+    --text-sm:0.875rem;
+    --text-base:1rem;
+    --text-lg:1.125rem;
+    --text-xl:1.25rem;
+    --text-2xl:1.5rem;
+    --text-3xl:1.875rem;
+}
+  
+
+@font-face {
+    font-family: "my-font";
+    src: url(../font/Dana-Regular.ttf);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family:my-font;
+    background-color: #17151E;
+    direction: rtl;
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+header{
+    display: flex;
+    background-color: #1f1d28;
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+
+.right{
+    float: right !important;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.left{
+    float: left !important;
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header nav div{
+    display: flex;
+    align-items: center;
+}
+
+header nav ul{
+    display: flex;
+    margin-right: 10px;
+    list-style-type: none;
+    display: flex !important;
+}
+
+header nav ul li{
+    color: #cccfe2;
+    padding: 10px 8px;
+    font-size: var(--text-base);
+}
+
+header nav ul li:hover{
+    color:#999aa2;
+}
+
+header nav .right a{
+    background-color: #8860C2;
+    padding: 8px 5px;
+    border-radius: 10px;
+    font-size: var(--text-base);
+}
+
+header nav .right a:hover{
+    background-color: #7042b5;
+}
+
+header nav .left form input{
+    height: 44px;
+    background-color: #34313E;
+    border: none;
+    border-radius: 5px;
+    padding: 0 10px;
+    outline: none;
+    font-size:.90rem;
+    color: #d5d8d7;
+    font-family: my-font;
+}
+
+/* برای مرورگرهای وب کیت (Chrome، Safari) */
+input::-webkit-input-placeholder {
+    color: #B4BBB8;
+}
+  
+  /* برای مرورگرهای فایرفاکس */
+  input:-moz-placeholder {
+    color: #B4BBB8;
+}
+  
+  /* برای مرورگرهای اینترنت اکسپلورر 10+ */
+  input::-ms-input-placeholder {
+    color: #B4BBB8;
+}
+
+header nav .left a{
+    transition: all .5s;
+    font-size: var(--text-sm);
+    color: #FFC107;
+    border: 1px solid #FFC107;
+    padding: 8px 0;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+header nav .left a:hover{
+    background-color: #FFFFFF;
+    color: #ffbf00;
+}
+
+/* end header */
+
+
+.blog{
+    display: flex !important;
+}
+
+.left .top-right{
+    margin: 3px 2px !important;
+}
+
+.left .top-left{
+    margin: 3px 2px !important;
+}
+
+.left .bottom-right{
+    margin: 3px 2px !important;
+}
+.left .bottom-left{
+    margin: 3px 2px !important;
+}
+
+.filter{
+    background-color: #1F1D28;
+    display: flex !important;
+    padding: 10px 8px;
+    flex-wrap: nowrap;
+}
+.filter a{
+    margin-left: 20px;
+    background-color: #2A2933;
+    padding: 10px 20px;
+    font-size: var(--text-base);
+    border-radius: 5px;
+    flex-grow: 2;
+    text-align: start;
+}
+
+.filter a:hover{
+    background-color: #514d69;
+    flex-grow: 1;
+}
+
+.filter button{
+    font-size: 18px;
+    background-color: #7C52B8;
+    color: #fff;
+    font-family: my-font;
+}
+
+.filter button:hover{
+    background-color: #6133a1;
+    border: 0;
+}
+
+/* end filter */
+
+menu{
+    margin-top: 50px;
+    text-align: start !important;
+}
+
+menu h2{
+    font-size: 25px;
+    font-weight: 600;
+    padding-top: 20px;
+    border-top: 1px solid #312F38;
+}
+
+menu section{
+    margin-top: 20px;
+    display: flex !important;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-bottom: 1px solid #312F38;
+    padding-bottom: 30px;
+}
+menu section img{
+    width: 16%;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/* end menu */
+
+
+.movie-parent{
+    margin-top: 30px;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.saidbar-parent{
+    display:flex !important;
+    height: 100%;
+    flex-direction: column;
+}
+
+.main{
+    display:flex !important;
+    background-color: #1F1D28;
+    border-radius: 5px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+}
+.saidbar{
+    background-color:#1F1D28;
+    border-radius:5px;
+    padding: 15px;
+    float: left !important;
+}
+
+.main img{
+    margin-left:20px;
+}
+
+.title-movie{
+    font-size:var(--text-2xl);
+    font-weight:500;
+    margin-bottom: 20px;
+    text-align: start !important;
+}
+
+.main div{
+    display: flex !important;
+    flex-direction: column;
+}
+
+.main div article{
+    display: flex !important;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.main div article span{
+    font-size: var(--text-xs);
+}
+
+.main div article a{
+    font-size: var(--text-sm);
+}
+
+.main div article a:hover{
+    color: #7E63D9;
+}
+
+.main span{
+    color: #838198;
+}
+.main .text-box{
+    border-radius: 5px;
+    padding: 0 5px;
+    display: flex !important;
+    font-size: var(--text-sm);
+    color: #D9D8E1;
+    margin-top: 10px;
+    background-color: #24222F;
+    height: 2rem;
+    align-items: center;
+    overflow: hidden; /* مخفی کردن محتوای اضافی */
+    text-overflow: ellipsis; /* نمایش سه نقطه برای محتوای اضافی */
+    white-space: nowrap; /* جلوگیری از خط شکنی */
+}
+
+.main section{
+    margin-top: 40px;
+    display: flex !important;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main section p{
+    border-radius: 5px;
+    padding: 10px 12px 10px 8px;
+    font-size: var(--text-sm);
+    color: #D9D8E1;
+    background-color: #24222F;
+    margin-left:10px;
+}
+
+.main section a{
+    background-color: #7C52B8;
+    padding: 10px 25px;
+    font-size: var(--text-sm);
+    font-weight: 500;
+    border-radius: 5px;
+    margin-right: 30%;
+}
+
+
+.main:nth-child(11){
+    justify-content: center;
+}
+
+.num-page{
+    margin-left: 20px;
+    background-color: #34313F;
+    padding: 10px 18px;
+    border-radius: 3px;
+    font-size: 19px;
+}
+
+.num-page:nth-child(2){
+    background-color: #7754AB;
+}
+
+
+.main:nth-child(12) h2{
+    margin-bottom: 20px;
+}
+
+.main:nth-child(12) p{
+    margin-bottom: 2px;
+    margin-top: 10px;
+}
+
+
+
+.saidbar h1{
+    font-size: var(--text-base);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.saidbar img{
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.saidbar img:nth-child(13){
+    margin-bottom: 30px;
+}
+.saidbar a{
+    padding: 10px 5px;
+    font-size: var(--text-base);
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all .3s;
+    color: #767A81;
+}
+
+.saidbar a:hover{
+    background-color: #fff;
+    color: black;
+    transition: all .5s;
+}
+
+.saidbar2{
+    background-image: url(../images/purple-bg.png);
+    border-radius:5px;
+    padding: 15px;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.saidbar2 h3{
+    font-size: var(--text-base);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.saidbar2 span{
+    font-size: var(--text-sm);
+    font-weight: 500;
+    padding:2px 20px;
+}
+
+.saidbar2 p{
+    font-size: var(--text-sm);
+    margin-top: 10px;
+    background-color: #F17474;
+    border-radius: 22px;
+    padding: 10px 23px;
+    color: #fdf8f8;
+    transition: all .4s;
+}
+
+.saidbar2 p:hover{
+    background-color: #e34f4f;
+    color: #fff;
+}
+
+
+
+
+.saidbar3{
+    background-color: #2AABEE;
+    float: left;
+    margin-top: 20px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.saidbar3:hover{
+    background-color: #14a9fa;
+}
+.saidbar3 p{
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+
+.saidbar4{
+    background-color: #F5745F;
+    float: left;
+    margin-top: 20px;
+    padding: 15px 10px;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.saidbar4:hover{
+    background-color: #fd543a;
+}
+.saidbar4 p{
+    font-size: var(--text-base);
+    font-weight: 500;
+}
+
+.saidbar5{
+    background-color:#1F1D28;
+    float: left;
+    margin-top: 20px;
+    padding: 15px 10px;
+    
+}
+.saidbar5 h3{
+    margin-bottom: 20px;
+}
+
+.saidbar5 a{
+    padding: 10px 15px;
+    font-size:var(--text-base);
+    font-weight: 500;
+    border-radius: 5px;
+    transition: all .4s;
+    color: #767A81;
+}
+
+.saidbar5 a:hover{
+    background-color: #fff;
+    color: black;
+    transition: all .5s;
+}
+
+
+/* end */
+
+
+
+
+
+footer{
+    background-color: #121017;
+    text-align: center;
+    padding: 25px 10px;
+    margin-bottom: 80px;
+}
+
+.footer-top{
+    border-bottom: 1px solid #2D3B3B;
+    padding: 20px 10px;
+}
+
+.footer-top img{
+    position: relative;
+    top: 5px;
+    padding: 0 10px;
+}
+
+
+.footer-bottom{
+    margin-top: 20px;
+}
+
+.footer-bottom a{
+    font-size: var(--text-sm);
+    padding: 3px 3px;
+    background-color: #1F1D28;
+    border-radius: 5px;
+}
